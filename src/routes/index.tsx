@@ -4,8 +4,8 @@ import { ArrowDown, ArrowUpRight, MapPin, Menu, X, Scissors, Sparkles, HeartHand
 import { Button } from "@/components/ui/button";
 import { Brand, ServiceIcon, WhatsAppButton } from "@/components/barbershop";
 import { business, mapsUrl } from "@/lib/business";
-import heroImage from "@/assets/barbershop-interior.jpg";
-import detailsImage from "@/assets/barber-details.jpg";
+import heroAsset from "@/assets/preto-ambiente.png.asset.json";
+import detailsAsset from "@/assets/preto-espaco.png.asset.json";
 
 const title = "Preto Barbearia | Luís Eduardo Magalhães";
 const description = "Conheça a Preto Barbearia em Luís Eduardo Magalhães, BA. Consulte os serviços, veja avaliações e entre em contato.";
@@ -39,7 +39,7 @@ function Index() {
     </div>{menuOpen && <nav id="mobile-navigation" className="mobile-nav" aria-label="Menu celular">{navigation.map(item => <a className="nav-link" key={item.id} href={`#${item.id}`} onClick={() => selectSection(item.id)}>{item.label}</a>)}</nav>}</header>
     <main>
       <section id="inicio" className="hero" aria-label="Preto Barbearia">
-        <img className="hero-image" src={heroImage} alt="Imagem ilustrativa de um ambiente de barbearia com cadeiras de couro e iluminação acolhedora" width={1920} height={1024} fetchPriority="high" />
+        <img className="hero-image" src={heroAsset.url} alt="Foto enviada de um ambiente de barbearia com cadeiras profissionais e espelhos" width={1010} height={765} fetchPriority="high" />
         <div className="site-container hero-content reveal-in">
           <p className="eyebrow">PRETO BARBEARIA · LUÍS EDUARDO MAGALHÃES</p>
           <h1>Seu estilo.<br /><span>Sua presença.</span></h1>
@@ -47,7 +47,7 @@ function Index() {
           <div className="hero-actions"><WhatsAppButton /><a className="text-link" href="#sobre" onClick={() => selectSection("sobre")}>Conheça a barbearia <ArrowUpRight size={16} /></a></div>
         </div>
         <div className="site-container hero-bottom"><span className="hero-location"><MapPin size={14} /> Luís Eduardo Magalhães, Bahia</span><a className="hero-scroll" href="#servicos" aria-label="Explorar serviços"><span>EXPLORE</span><ArrowDown size={18} /></a></div>
-        <span className="hero-caption">Imagem ilustrativa · não representa o estabelecimento</span>
+        <span className="hero-caption">Foto enviada para esta apresentação</span>
       </section>
       <div className="signature-strip"><div className="site-container signature-inner"><p className="signature-name">Presença começa no cuidado.</p><span className="signature-item"><Scissors /> Estilo & personalidade</span><span className="signature-item"><Armchair /> Seu momento de cuidado</span><span className="signature-item"><Sparkles /> Atenção aos detalhes</span></div></div>
       <section id="servicos" className="section"><div className="site-container">
@@ -56,7 +56,7 @@ function Index() {
         <p className="service-note">Categorias sujeitas à confirmação. Consulte os serviços oferecidos diretamente com a barbearia.</p>
       </div></section>
       <section id="sobre" className="section about-section"><div className="site-container about-layout">
-        <figure className="about-photo"><img src={detailsImage} alt="Imagem ilustrativa de tesoura, máquina de corte, escova e toalha sobre uma bancada" width={1024} height={1280} loading="lazy" /><figcaption>Imagem ilustrativa. As fotos reais da barbearia serão adicionadas em breve.</figcaption></figure>
+        <figure className="about-photo"><img src={detailsAsset.url} alt="Foto enviada de um espaço com mesa de sinuca, paredes de tijolos e iluminação acolhedora" width={628} height={1020} loading="lazy" /><figcaption>Foto enviada para esta apresentação.</figcaption></figure>
         <div className="about-copy"><p className="eyebrow">ESSÊNCIA PRETO</p><h2>Mais do que<br />uma barbearia.</h2><p>Um espaço para cuidar do visual, valorizar seu estilo e aproveitar uma experiência de atendimento feita com atenção aos detalhes.</p><p>Seu momento de pausa. Seu cuidado. Sua presença.</p><div className="about-signature"><Scissors size={27} strokeWidth={1.2} /><div>PRETO BARBEARIA<span>Luís Eduardo Magalhães · Bahia</span></div></div></div>
       </div></section>
       <section className="section differences"><div className="site-container difference-layout"><div><p className="eyebrow">O QUE NOS MOVE</p><h2>Cuidado em<br />cada detalhe.</h2></div><div className="difference-grid">{differences.map(item => <div className="difference-item" key={item.title}><item.icon /><h3>{item.title}</h3><p>{item.text}</p></div>)}</div></div></section>
