@@ -10,7 +10,7 @@ Os dados editáveis do negócio ficam centralizados em [`src/lib/business.ts`](s
 - **Contato:** `telephone` é o telefone exibido nos dados locais; `whatsappNumber` controla os botões de agendamento.
 - **Serviços:** edite `name`, `description`, `price` e `whatsappMessage`. Para exibir um preço, use por exemplo `price: "R$ 45"`; deixe `price: ""` até confirmar o valor.
 - **Horários:** preencha `openingHours` com os dias e horários confirmados. Vazio, o site orienta o visitante a consultar pelo WhatsApp.
-- **Instagram:** `instagramEmbedUrl` controla a prévia pública do perfil e do feed. Troque o nome de usuário no link se a conta mudar.
+- **Instagram:** `instagramEmbedUrl` controla a prévia pública do perfil e do feed. Troque o nome de usuário no link se a conta mudar. A incorporação oficial define a aparência do perfil e não aplica o tema escuro do site.
 - **Avaliações:** `reviewRating`, `reviewCount`, `googleReviewsUrl` e `reviewQuotes` controlam nota, quantidade, link e trechos exibidos. Mantenha os números atualizados e use apenas avaliações públicas reais.
 
 As imagens principais do espaço estão configuradas em `src/routes/index.tsx` (`heroImage` e `detailsImage`). A marca usada no cabeçalho e rodapé está em `src/assets/uploads/6901.png`. Substitua esses arquivos/links somente por imagens autorizadas da barbearia.

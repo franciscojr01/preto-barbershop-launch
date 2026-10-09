@@ -265,7 +265,7 @@
 .instagram-section { background: var(--background); }
 .instagram-heading { align-items: flex-end; }
 .instagram-profile-link { display: inline-flex; align-items: center; gap: 9px; color: var(--primary); font-size: 12px; min-height: 44px; }
-.instagram-profile-preview { width: 100%; height: 740px; overflow: hidden; background: white; border: 1px solid var(--border); }
+.instagram-profile-preview { width: 100%; height: 740px; overflow: hidden; background: var(--card); border: 1px solid var(--border); }
 .instagram-profile-preview iframe { display: block; width: 100%; height: 100%; border: 0; }
 .instagram-note code { color: var(--foreground); font-size: inherit; }
 .instagram-channel { display: flex; width: 100%; align-items: center; gap: 16px; padding: 25px 0; color: var(--foreground); border-bottom: 1px solid var(--border); }
@@ -273,7 +273,7 @@
 .instagram-channel > svg:last-child { margin-left: auto; flex-shrink: 0; }
 .instagram-channel > span { text-align: left; }
 .map-frame { height: 390px; margin-top: 48px; overflow: hidden; border: 1px solid var(--border); background: var(--card); }
-.map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.map-frame iframe { display: block; width: 100%; height: 100%; border: 0; filter: grayscale(1) invert(1) brightness(.9) contrast(.88); }
 .map-caption { display: flex; align-items: center; gap: 12px; margin-top: 17px; color: var(--muted-foreground); font-size: 11px; }
 .map-caption > svg { flex-shrink: 0; color: var(--primary); }
 .map-caption p { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 11px; margin: 0; }
