@@ -259,4 +259,8 @@
   .floating-contact { width: 47px; height: 47px; right: 17px; bottom: 18px; }
   .contact-modal { padding: 32px 25px; }
 }
+.brand-footer-logo { width: 90px; height: 90px; object-fit: contain; display: block; }
+
+#lovable-badge { display: none !important; }
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation: none !important; transition: none !important; } }
