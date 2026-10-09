@@ -4,8 +4,10 @@ import { ArrowDown, ArrowUpRight, MapPin, Menu, X, Scissors, Sparkles, HeartHand
 import { Button } from "@/components/ui/button";
 import { Brand, ServiceIcon, WhatsAppButton } from "@/components/barbershop";
 import { business, mapsUrl } from "@/lib/business";
-import heroImage from "@/assets/barbershop-interior.jpg";
-import detailsImage from "@/assets/barber-details.jpg";
+
+// Keep the exact original Lovable uploads while their binary files are not in GitHub.
+const heroImage = "https://preto-barbershop-launch.lovable.app/__l5e/assets-v1/4454bf1c-109d-46b4-9de0-77b717f3ace7/preto-ambiente.png";
+const detailsImage = "https://preto-barbershop-launch.lovable.app/__l5e/assets-v1/59122f3e-b568-48b2-a384-2cf064525d2e/preto-espaco.png";
 
 const title = "Preto Barbearia | Luís Eduardo Magalhães";
 const description = "Conheça a Preto Barbearia em Luís Eduardo Magalhães, BA. Consulte os serviços, veja avaliações e entre em contato.";
@@ -39,7 +41,7 @@ function Index() {
     </div>{menuOpen && <nav id="mobile-navigation" className="mobile-nav" aria-label="Menu celular">{navigation.map(item => <a className="nav-link" key={item.id} href={`#${item.id}`} onClick={() => selectSection(item.id)}>{item.label}</a>)}</nav>}</header>
     <main>
       <section id="inicio" className="hero" aria-label="Preto Barbearia">
-        <img className="hero-image" src={heroImage} alt="Ambiente de barbearia com cadeiras profissionais e espelhos" width={1920} height={1024} fetchPriority="high" />
+        <img className="hero-image" src={heroImage} alt="Ambiente original da Preto Barbearia" width={1337} height={1020} fetchPriority="high" />
         <div className="site-container hero-content reveal-in">
           <p className="eyebrow">PRETO BARBEARIA · LUÍS EDUARDO MAGALHÃES</p>
           <h1>Seu estilo.<br /><span>Sua presença.</span></h1>
@@ -56,7 +58,7 @@ function Index() {
         <p className="service-note">Categorias sujeitas à confirmação. Consulte os serviços oferecidos diretamente com a barbearia.</p>
       </div></section>
       <section id="sobre" className="section about-section"><div className="site-container about-layout">
-        <figure className="about-photo"><img src={detailsImage} alt="Ferramentas profissionais de barbearia organizadas sobre uma bancada" width={1024} height={1280} loading="lazy" /><figcaption>Detalhes de barbearia.</figcaption></figure>
+        <figure className="about-photo"><img src={detailsImage} alt="Espaço original da Preto Barbearia" width={628} height={1020} loading="lazy" /><figcaption>Foto do espaço da Preto Barbearia.</figcaption></figure>
         <div className="about-copy"><p className="eyebrow">ESSÊNCIA PRETO</p><h2>Mais do que<br />uma barbearia.</h2><p>Um espaço para cuidar do visual, valorizar seu estilo e aproveitar uma experiência de atendimento feita com atenção aos detalhes.</p><p>Seu momento de pausa. Seu cuidado. Sua presença.</p><div className="about-signature"><Scissors size={27} strokeWidth={1.2} /><div>PRETO BARBEARIA<span>Luís Eduardo Magalhães · Bahia</span></div></div></div>
       </div></section>
       <section className="section differences"><div className="site-container difference-layout"><div><p className="eyebrow">O QUE NOS MOVE</p><h2>Cuidado em<br />cada detalhe.</h2></div><div className="difference-grid">{differences.map(item => <div className="difference-item" key={item.title}><item.icon /><h3>{item.title}</h3><p>{item.text}</p></div>)}</div></div></section>
