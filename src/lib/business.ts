@@ -1,58 +1,80 @@
-// Confirm the business details here before the commercial preview is published.
+// Edite os dados comerciais desta página neste arquivo. Confirme preços e horários com a barbearia.
 export const business = {
   name: "PRETO BARBEARIA",
   city: "Luís Eduardo Magalhães",
   state: "Bahia",
   address: "Avenida Juscelino Kubitscheck, 1619, Centro",
   postalCode: "47850-000",
+  telephone: "557799674609",
+  // WhatsApp público informado no Google Maps e no Instagram do negócio.
+  whatsappNumber: "5577999244016",
   instagramUrl: "https://www.instagram.com/pretobarbearia.lem/",
-  whatsappNumber: "557799674609",
-  googleReviewsUrl: "", // Exact Google business profile URL, pending confirmation.
+  // Links de publicações públicas; troque os URLs pelos posts que quiser destacar.
+  instagramPosts: [
+    { url: "https://www.instagram.com/p/Dd4NcySlhlp/" },
+    { url: "https://www.instagram.com/p/DdwtCfVGOsC/" },
+  ],
+  googleReviewsUrl: "https://share.google/Ai5wROOYxEVsJKeaP",
+  reviewRating: 4.9,
   reviewCount: 42,
+  // Exemplo de formato: "Ter a sáb · 09h às 19h". Deixe vazio até confirmar.
   openingHours: "",
+  // Preencha price após confirmar com a barbearia; exemplo: "R$ 45".
   services: [
     {
       id: "corte",
       name: "Corte masculino",
-      description: "Seu estilo, em cada detalhe.",
+      description: "Corte alinhado ao estilo que você escolher.",
+      price: "",
       icon: "scissors",
-      whatsappUrl: "https://wa.me/557799674609?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20corte%20masculino%20na%20Preto%20Barbearia.%20Quais%20hor%C3%A1rios%20est%C3%A3o%20dispon%C3%ADveis%3F",
+      whatsappMessage: "Olá! Gostaria de agendar um corte masculino na Preto Barbearia. Quais horários estão disponíveis?",
     },
     {
       id: "barba",
       name: "Barba",
-      description: "Cuidado que completa o visual.",
+      description: "Acabamento e cuidado para a barba.",
+      price: "",
       icon: "razor",
-      whatsappUrl: "https://wa.me/557799674609?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20servi%C3%A7o%20de%20barba%20na%20Preto%20Barbearia.%20Quais%20hor%C3%A1rios%20est%C3%A3o%20dispon%C3%ADveis%3F",
+      whatsappMessage: "Olá! Gostaria de agendar um serviço de barba na Preto Barbearia. Quais horários estão disponíveis?",
     },
     {
       id: "combo",
       name: "Corte e barba",
-      description: "Uma combinação com presença.",
+      description: "Corte masculino e barba no mesmo atendimento.",
+      price: "",
       icon: "combo",
-      whatsappUrl: "https://wa.me/557799674609?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20corte%20e%20barba%20na%20Preto%20Barbearia.%20Quais%20hor%C3%A1rios%20est%C3%A3o%20dispon%C3%ADveis%3F",
+      whatsappMessage: "Olá! Gostaria de agendar corte e barba na Preto Barbearia. Quais horários estão disponíveis?",
     },
     {
       id: "acabamento",
       name: "Acabamento",
-      description: "Os detalhes fazem a diferença.",
+      description: "Refino do corte nos detalhes.",
+      price: "",
       icon: "sparkles",
-      whatsappUrl: "https://wa.me/557799674609?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20acabamento%20na%20Preto%20Barbearia.%20Quais%20hor%C3%A1rios%20est%C3%A3o%20dispon%C3%ADveis%3F",
+      whatsappMessage: "Olá! Gostaria de agendar um acabamento na Preto Barbearia. Quais horários estão disponíveis?",
     },
     {
       id: "finalizacao",
       name: "Finalização",
-      description: "Seu visual pronto para qualquer ocasião.",
+      description: "Finalização do visual após o corte.",
+      price: "",
       icon: "sparkles",
-      whatsappUrl: "https://wa.me/557799674609?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20finaliza%C3%A7%C3%A3o%20na%20Preto%20Barbearia.%20Quais%20hor%C3%A1rios%20est%C3%A3o%20dispon%C3%ADveis%3F",
+      whatsappMessage: "Olá! Gostaria de agendar uma finalização na Preto Barbearia. Quais horários estão disponíveis?",
     },
+  ],
+  // Trechos de avaliações públicas já usadas na prévia. Atualize com autorização e revisão do negócio.
+  reviewQuotes: [
+    { author: "Rony Rodrigues", text: "A barbearia fica em um local de fácil acesso, sempre corto o meu cabelo com o Júnior profissional excepcional. Super recomendo, principalmente para quem preza qualidade e atendimento com um preço justo." },
+    { author: "Na Estrada com Valner Silva", text: "Ambiente muito bonito, confortável, e atendimento personalizado!" },
   ],
 };
 
-export function getWhatsAppUrl(number: string): string | null {
+export function getWhatsAppUrl(number: string, message = "Olá! Gostaria de agendar um horário na Preto Barbearia. Quais horários estão disponíveis?"): string | null {
   const digits = number.replace(/\D/g, "");
   if (!/^55\d{10,11}$/.test(digits)) return null;
-  return `https://wa.me/${digits}?text=${encodeURIComponent("Olá! Gostaria de agendar um horário na Preto Barbearia. Quais horários estão disponíveis?")}`;
+  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
 }
 
-export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${business.name}, ${business.address}, ${business.city}, ${business.state}, ${business.postalCode}`)}`;
+const addressQuery = `${business.name}, ${business.address}, ${business.city}, ${business.state}, ${business.postalCode}`;
+export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressQuery)}`;
+export const mapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(addressQuery)}&output=embed`;

@@ -87,11 +87,6 @@
 .image-caption { font-size: 9px; color: var(--muted-foreground); }
 .hero-scroll { display: flex; align-items: center; gap: 13px; color: var(--muted-foreground); font-size: 9px; letter-spacing: 1.6px; }
 .hero-caption { position: absolute; z-index: 3; bottom: 9px; right: 20px; font-size: 8px; color: var(--muted-foreground); }
-.signature-strip { border-bottom: 1px solid var(--border); background: var(--secondary); }
-.signature-inner { min-height: 83px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.signature-name { color: var(--muted-foreground); font-size: 10px; text-transform: uppercase; letter-spacing: 2px; }
-.signature-item { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted-foreground); }
-.signature-item svg { width: 17px; height: 17px; color: var(--primary); stroke-width: 1.3; }
 .section { padding: 94px 0; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 36px; margin-bottom: 36px; }
 .section h2 { font-size: 48px; line-height: 1.07; font-weight: 600; margin-top: 16px; }
@@ -113,16 +108,6 @@
 .about-photo figcaption { font-size: 9px; color: var(--muted-foreground); margin-top: 11px; }
 .about-copy h2 { font-size: 57px; max-width: 380px; }
 .about-copy > p { margin-top: 24px; font-size: 13px; line-height: 1.9; color: var(--muted-foreground); max-width: 400px; }
-.about-signature { display: flex; align-items: center; gap: 15px; border-top: 1px solid var(--border); margin-top: 32px; padding-top: 26px; font-size: 12px; }
-.about-signature svg { color: var(--primary); }
-.about-signature span { display: block; color: var(--muted-foreground); font-size: 10px; margin-top: 5px; }
-.differences { padding: 75px 0; }
-.difference-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 75px; align-items: center; }
-.difference-layout h2 { font-size: 41px; }
-.difference-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 30px; }
-.difference-item svg { color: var(--primary); width: 28px; height: 28px; stroke-width: 1.2; margin-bottom: 19px; }
-.difference-item h3 { font-size: 23px; font-weight: 500; }
-.difference-item p { color: var(--muted-foreground); font-size: 11px; line-height: 1.8; margin-top: 9px; }
 .reviews-section { background: var(--secondary); border-block: 1px solid var(--border); }
 .section-kicker { display: flex; justify-content: space-between; gap: 20px; font-size: 11px; color: var(--muted-foreground); padding-bottom: 24px; border-bottom: 1px solid var(--border); }
 .section-kicker > span:first-child { color: var(--primary); }
@@ -217,10 +202,6 @@
   .hero-location { font-size: 9px; }
   .hero-scroll span { display: none; }
   .hero-caption { right: 20px; font-size: 7px; }
-  .signature-inner { flex-wrap: wrap; padding: 22px 0; row-gap: 18px; column-gap: 14px; justify-content: flex-start; }
-  .signature-name { width: 100%; font-size: 8px; }
-  .signature-item { font-size: 9px; gap: 6px; }
-  .signature-item svg { width: 14px; }
   .section { padding: 63px 0; }
   .section h2 { font-size: 39px; }
   .section-heading { display: block; margin-bottom: 28px; }
@@ -268,27 +249,48 @@
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation: none !important; transition: none !important; } }
 
-/* Galeria, carrossel e captura de avaliações */
-.gallery-section { padding-top: 56px; padding-bottom: 0; }
-.gallery-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; }
-.gallery-grid > * { height: 240px; width: 100%; object-fit: cover; }
-.gallery-grid > :first-child { grid-row: span 2; height: 492px; }
-.photo-slot { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px dashed color-mix(in oklch, var(--primary) 45%, transparent); background: var(--card); color: var(--muted-foreground); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
-.carousel-frame { height: 420px; overflow: hidden; }
-.carousel-frame > * { height: 100%; width: 100%; object-fit: cover; object-position: center 55%; }
-.carousel-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
-.carousel-arrow { border: 1px solid var(--border); border-radius: 999px; width: 44px; height: 44px; }
-.carousel-count { font-size: 12px; letter-spacing: .14em; color: var(--muted-foreground); }
-.review-shot { margin: 0 0 0 -80px; width: calc(100% + 88px); max-width: 1280px; border: 0; padding: 0; background: transparent; box-shadow: none; display: block; cursor: pointer; }
-.review-shot-image { display: block; width: 100%; max-width: none; height: auto; }
-.review-shot img { width: 100%; height: auto; display: block; border: 0; outline: 0; box-shadow: none; }
-.reviews-copy-below { max-width: 620px; margin-top: -10px; }
-.reviews-copy-above { max-width: 620px; margin-bottom: -18px; }
-.review-shot figcaption { font-size: 11px; color: var(--muted-foreground); margin-top: 10px; }
+/* Sections comerciais: serviços, prova social, Instagram e localização */
+.services-section { background: var(--background); }
+.service-card { display: flex; flex-direction: column; min-height: 260px; }
+.service-top { margin-bottom: 24px; }
+.service-card h3 { min-height: auto; }
+.service-card p { min-height: 40px; }
+.service-price { color: var(--primary); font-size: 12px; margin-top: 18px; }
+.service-bottom { margin-top: auto; padding-top: 16px; }
+.about-photo img { display: block; }
+.about-link { margin-top: 22px; }
+.rating-summary { display: flex; align-items: center; gap: 25px; margin: 42px 0 32px; }
+.rating-value { font-family: var(--font-display); font-size: 92px; line-height: .9; color: var(--primary); }
+.rating-summary p { margin-top: 5px; font-size: 12px; color: var(--muted-foreground); }
+.rating-stars { color: var(--primary); font-size: 15px; letter-spacing: 3px; }
+.review-quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.review-quote { margin: 0; padding: 24px; background: var(--card); border: 1px solid var(--border); }
+.review-quote blockquote { margin: 14px 0 18px; color: var(--foreground); font-size: 14px; line-height: 1.8; }
+.review-quote figcaption { color: var(--muted-foreground); font-size: 11px; }
+.review-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 24px; color: var(--primary); border-bottom: 1px solid var(--primary); padding: 0 0 8px; font-size: 12px; }
+.review-note,.instagram-note { margin-top: 14px; color: var(--muted-foreground); font-size: 10px; line-height: 1.7; }
+.instagram-section { background: var(--background); }
+.instagram-heading { align-items: flex-end; }
+.instagram-profile-link { display: inline-flex; align-items: center; gap: 9px; color: var(--primary); font-size: 12px; min-height: 44px; }
+.instagram-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.instagram-frame { height: 600px; overflow: hidden; background: white; border: 1px solid var(--border); }
+.instagram-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.instagram-note code { color: var(--foreground); font-size: inherit; }
+.directions-link { display: inline-flex; align-items: center; gap: 12px; margin: 25px 0 0 40px; padding: 0 0 8px; color: var(--primary); border-bottom: 1px solid var(--primary); font-size: 12px; }
+.instagram-channel { display: flex; width: 100%; align-items: center; gap: 16px; padding: 25px 0; color: var(--foreground); border-bottom: 1px solid var(--border); }
+.instagram-channel > svg:first-child { color: var(--primary); flex-shrink: 0; }
+.instagram-channel > svg:last-child { margin-left: auto; flex-shrink: 0; }
+.instagram-channel > span { text-align: left; }
+.map-frame { height: 390px; margin-top: 48px; overflow: hidden; border: 1px solid var(--border); background: var(--card); }
+.map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
 @media (max-width: 767px) {
-  .review-shot { width: calc(100% + 24px); margin-left: -12px; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-grid > * { height: 150px; }
-  .gallery-grid > :first-child { grid-column: span 2; grid-row: auto; height: 240px; }
-  .carousel-frame { height: 330px; }
+  .rating-summary { margin: 32px 0 25px; gap: 18px; }
+  .rating-value { font-size: 76px; }
+  .review-quotes,.instagram-grid { grid-template-columns: 1fr; }
+  .review-quote { padding: 20px; }
+  .instagram-heading { display: block; }
+  .instagram-profile-link { margin-top: 15px; }
+  .instagram-frame { height: 600px; width: min(100%, 500px); margin-inline: auto; }
+  .directions-link { margin-left: 0; }
+  .map-frame { height: 320px; margin-top: 32px; }
 }
