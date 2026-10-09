@@ -10,7 +10,7 @@ export const business = {
   whatsappNumber: "5577999244016",
   instagramUrl: "https://www.instagram.com/pretobarbearia.lem/",
   // Embed público do perfil, com cabeçalho e feed. Troque o usuário ao mudar a conta.
-  instagramEmbedUrl: "https://www.instagram.com/pretobarbearia.lem/embed/?theme=dark",
+  instagramEmbedUrl: "https://www.instagram.com/pretobarbearia.lem/embed/",
   googleReviewsUrl: "https://share.google/Ai5wROOYxEVsJKeaP",
   reviewRating: 4.9,
   reviewCount: 42,
