@@ -68,7 +68,7 @@ function Index() {
         <div className="section-kicker"><span>Avaliações</span><span>Preto · LEM</span></div>
         <div className="reviews-copy reviews-copy-above"><h2>A experiência<br />de quem conhece.</h2><p>A opinião de quem já sentou na nossa cadeira.<br />Direto no Google, sem filtro.</p></div>
         <a className="review-shot" href="https://share.google/Ai5wROOYxEVsJKeaP" target="_blank" rel="noopener noreferrer" aria-label="Abrir avaliações da Preto Barbearia no Google">
-          <img src={reviewsShot} alt="Avaliações da Preto Barbearia no Google: nota 4,9 com 42 avaliações" width={1119} height={1024} loading="lazy" />
+          <img className="review-shot-image" src={reviewsShot} alt="Avaliações da Preto Barbearia no Google: nota 4,9 com 42 avaliações" width={1119} height={1024} loading="lazy" />
         </a>
         <div className="reviews-copy reviews-copy-below"><Button asChild variant="editorial" className="review-link"><a href="https://share.google/Ai5wROOYxEVsJKeaP" target="_blank" rel="noopener noreferrer">Ver avaliações no Google <ArrowUpRight /></a></Button></div>
       </div></section>
