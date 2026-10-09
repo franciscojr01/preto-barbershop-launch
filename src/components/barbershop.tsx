@@ -2,11 +2,12 @@ import { useState } from "react";
 import { ArrowUpRight, MessageCircle, X, Scissors } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { business, getWhatsAppUrl } from "@/lib/business";
-import localLogo from "@/assets/uploads/6835.png";
+
+const originalLogo = "https://preto-barbershop-launch.lovable.app/__l5e/assets-v1/39246e06-29f5-4565-8948-78791fc3eabc/preto-logo.png";
 
 export function Brand({ footer = false }: { footer?: boolean }) {
-  if (!footer) return <a href="#inicio" className="brand brand-logo" aria-label="Preto Barbearia — início"><img src={localLogo} alt="Preto Barbearia" width={768} height={768} /></a>;
-  return <a href="#inicio" className="brand brand-footer" aria-label="Preto Barbearia — início"><img className="brand-footer-logo" src={localLogo} alt="Preto Barbearia" width={120} height={120} /></a>;
+  if (!footer) return <a href="#inicio" className="brand brand-logo" aria-label="Preto Barbearia — início"><img src={originalLogo} alt="Preto Barbearia" width={768} height={768} /></a>;
+  return <a href="#inicio" className="brand brand-footer" aria-label="Preto Barbearia — início"><img className="brand-footer-logo" src={originalLogo} alt="Preto Barbearia" width={120} height={120} /></a>;
 }
 
 export function WhatsAppButton({ label = "Agendar pelo WhatsApp", compact = false, floating = false }: { label?: string; compact?: boolean; floating?: boolean }) {
