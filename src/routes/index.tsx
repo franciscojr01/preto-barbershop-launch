@@ -66,10 +66,11 @@ function Index() {
       <section className="section differences"><div className="site-container difference-layout"><div><p className="eyebrow">O QUE NOS MOVE</p><h2>Cuidado em<br />cada detalhe.</h2></div><div className="difference-grid">{differences.map(item => <div className="difference-item" key={item.title}><item.icon /><h3>{item.title}</h3><p>{item.text}</p></div>)}</div></div></section>
       <section id="avaliacoes" className="section reviews-section"><div className="site-container">
         <div className="section-kicker"><span>Avaliações</span><span>Preto · LEM</span></div>
-        <div className="reviews-copy reviews-copy-above"><h2>A experiência<br />de quem conhece.</h2><p>A opinião de quem já sentou na nossa cadeira.<br />Direto no Google, sem filtro.</p><Button asChild variant="editorial" className="review-link"><a href="https://share.google/Ai5wROOYxEVsJKeaP" target="_blank" rel="noopener noreferrer">Ver avaliações no Google <ArrowUpRight /></a></Button></div>
+        <div className="reviews-copy reviews-copy-above"><h2>A experiência<br />de quem conhece.</h2><p>A opinião de quem já sentou na nossa cadeira.<br />Direto no Google, sem filtro.</p></div>
         <a className="review-shot" href="https://share.google/Ai5wROOYxEVsJKeaP" target="_blank" rel="noopener noreferrer" aria-label="Abrir avaliações da Preto Barbearia no Google">
           <img src={reviewsShot} alt="Avaliações da Preto Barbearia no Google: nota 4,9 com 42 avaliações" width={1119} height={1024} loading="lazy" />
         </a>
+        <div className="reviews-copy reviews-copy-below"><Button asChild variant="editorial" className="review-link"><a href="https://share.google/Ai5wROOYxEVsJKeaP" target="_blank" rel="noopener noreferrer">Ver avaliações no Google <ArrowUpRight /></a></Button></div>
       </div></section>
       <section id="contato" className="section contact-section"><div className="site-container">
         <div className="section-kicker"><span>Contato & localização</span><span>Luís Eduardo Magalhães · BA</span></div>
