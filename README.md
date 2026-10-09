@@ -28,4 +28,8 @@ Para gerar a versão de produção:
 npm run build
 ```
 
-O projeto usa Vite e Nitro com saída `cloudflare-module`, configurada em `vite.config.ts`.
+## Publicar no Cloudflare Pages
+
+O projeto do Cloudflare usa o nome `pretobarbearia`, que gera o endereço `https://pretobarbearia.pages.dev`. Configure o build do Pages com `npm run build:pages` e o diretório de saída `dist`. O script seleciona o preset `cloudflare_pages` do Nitro e funciona no Windows e nos ambientes Linux de CI.
+
+O deploy direto pode ser feito com `npx wrangler pages deploy dist --project-name=pretobarbearia`. O `wrangler.jsonc` mantém o nome, a data de compatibilidade e o diretório de saída alinhados.

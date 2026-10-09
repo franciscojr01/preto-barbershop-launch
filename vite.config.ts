@@ -10,9 +10,15 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // netlify.toml, while the Lovable preview keeps its default target.
 const nitroForNetlify =
   process.env['NITRO_PRESET'] === "netlify" ? { preset: "netlify" as const } : undefined;
+const nitroForCloudflarePages =
+  process.env['NITRO_PRESET'] === "cloudflare_pages"
+    ? { preset: "cloudflare_pages" as const }
+    : undefined;
 
 export default defineConfig({
-  ...(nitroForNetlify ? { nitro: nitroForNetlify } : {}),
+  ...(nitroForNetlify || nitroForCloudflarePages
+    ? { nitro: nitroForNetlify ?? nitroForCloudflarePages }
+    : {}),
   vite: {
     // Prebundle the initial page's dependencies together so late discovery
     // cannot leave an open preview using two React module generations.
