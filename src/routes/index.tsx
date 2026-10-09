@@ -47,7 +47,7 @@ function Index() {
           <div className="hero-actions"><WhatsAppButton /><a className="text-link" href="#sobre" onClick={() => selectSection("sobre")}>Conheça a barbearia <ArrowUpRight size={16} /></a></div>
         </div>
         <div className="site-container hero-bottom"><span className="hero-location"><MapPin size={14} /> Luís Eduardo Magalhães, Bahia</span><a className="hero-scroll" href="#servicos" aria-label="Explorar serviços"><span>EXPLORE</span><ArrowDown size={18} /></a></div>
-        <span className="hero-caption">Foto enviada para esta apresentação</span>
+        <span className="hero-caption">Foto do espaço da Preto Barbearia</span>
       </section>
       <div className="signature-strip"><div className="site-container signature-inner"><p className="signature-name">Presença começa no cuidado.</p><span className="signature-item"><Scissors /> Estilo & personalidade</span><span className="signature-item"><Armchair /> Seu momento de cuidado</span><span className="signature-item"><Sparkles /> Atenção aos detalhes</span></div></div>
       <section id="servicos" className="section"><div className="site-container">
@@ -56,7 +56,7 @@ function Index() {
         <p className="service-note">Categorias sujeitas à confirmação. Consulte os serviços oferecidos diretamente com a barbearia.</p>
       </div></section>
       <section id="sobre" className="section about-section"><div className="site-container about-layout">
-        <figure className="about-photo"><img src={detailsAsset.url} alt="Foto enviada de um espaço com mesa de sinuca, paredes de tijolos e iluminação acolhedora" width={628} height={1020} loading="lazy" /><figcaption>Foto enviada para esta apresentação.</figcaption></figure>
+        <figure className="about-photo"><img src={detailsAsset.url} alt="Foto enviada de um espaço com mesa de sinuca, paredes de tijolos e iluminação acolhedora" width={628} height={1020} loading="lazy" /><figcaption>Foto do espaço da Preto Barbearia</figcaption></figure>
         <div className="about-copy"><p className="eyebrow">ESSÊNCIA PRETO</p><h2>Mais do que<br />uma barbearia.</h2><p>Um espaço para cuidar do visual, valorizar seu estilo e aproveitar uma experiência de atendimento feita com atenção aos detalhes.</p><p>Seu momento de pausa. Seu cuidado. Sua presença.</p><div className="about-signature"><Scissors size={27} strokeWidth={1.2} /><div>PRETO BARBEARIA<span>Luís Eduardo Magalhães · Bahia</span></div></div></div>
       </div></section>
       <section className="section differences"><div className="site-container difference-layout"><div><p className="eyebrow">O QUE NOS MOVE</p><h2>Cuidado em<br />cada detalhe.</h2></div><div className="difference-grid">{differences.map(item => <div className="difference-item" key={item.title}><item.icon /><h3>{item.title}</h3><p>{item.text}</p></div>)}</div></div></section>
