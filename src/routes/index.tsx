@@ -68,10 +68,9 @@ function Index() {
         <div className="section-kicker"><span>Avaliações</span><span>Preto · LEM</span></div>
         <div className="reviews-layout">
           <div className="review-summary"><div className="review-count">{business.reviewCount}</div><div className="review-source"><span className="google-g" aria-hidden="true">G</span><span>avaliações no Google</span></div></div>
-          <div className="reviews-copy"><h2>A experiência<br />de quem conhece.</h2><p>A opinião de quem já sentou na nossa cadeira.<br />Direto no Google, sem filtro.</p>{business.googleReviewsUrl ? <Button asChild variant="editorial" className="review-link"><a href={business.googleReviewsUrl} target="_blank" rel="noopener noreferrer">Ver avaliações no Google <ArrowUpRight /></a></Button> : <Button variant="editorial" className="review-link" onClick={() => setReviewsOpen(true)}>Ver avaliações no Google <ArrowUpRight /></Button>}</div>
         </div>
         <figure className="review-shot"><img src={reviewsShot} alt="Avaliações da Preto Barbearia no Google: nota 4,9 com 42 avaliações" width={1119} height={1024} loading="lazy" /></figure>
-        <div className="reviews-footnote"><span>Opiniões de clientes</span><p>Contagem da ficha consultada; pode mudar.</p></div>
+        <div className="reviews-copy reviews-copy-below"><h2>A experiência<br />de quem conhece.</h2><p>A opinião de quem já sentou na nossa cadeira.<br />Direto no Google, sem filtro.</p>{business.googleReviewsUrl ? <Button asChild variant="editorial" className="review-link"><a href={business.googleReviewsUrl} target="_blank" rel="noopener noreferrer">Ver avaliações no Google <ArrowUpRight /></a></Button> : <Button variant="editorial" className="review-link" onClick={() => setReviewsOpen(true)}>Ver avaliações no Google <ArrowUpRight /></Button>}</div>
       </div></section>
       <section id="contato" className="section contact-section"><div className="site-container">
         <div className="section-kicker"><span>Contato & localização</span><span>Luís Eduardo Magalhães · BA</span></div>
