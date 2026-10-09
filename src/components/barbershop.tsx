@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowUpRight, MessageCircle, X, Scissors } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { business, getWhatsAppUrl } from "@/lib/business";
-import logoAsset from "@/assets/preto-logo.jpg.asset.json";
+import logoAsset from "@/assets/preto-logo.png.asset.json";
 
 export function Brand({ footer = false }: { footer?: boolean }) {
   if (!footer) return <a href="#inicio" className="brand brand-logo" aria-label="Preto Barbearia — início"><img src={logoAsset.url} alt="Preto Barbearia" width={768} height={768} /></a>;
