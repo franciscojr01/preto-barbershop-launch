@@ -9,7 +9,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // Lovable's wrapper targets Cloudflare by default. Netlify sets this in
 // netlify.toml, while the Lovable preview keeps its default target.
 const nitroForNetlify =
-  process.env.NITRO_PRESET === "netlify" ? { preset: "netlify" as const } : undefined;
+  process.env['NITRO_PRESET'] === "netlify" ? { preset: "netlify" as const } : undefined;
 
 export default defineConfig({
   ...(nitroForNetlify ? { nitro: nitroForNetlify } : {}),
