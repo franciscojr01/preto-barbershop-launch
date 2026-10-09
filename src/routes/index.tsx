@@ -71,7 +71,7 @@ function Index() {
         <div className="site-container hero-content reveal-in">
           <p className="eyebrow">PRETO BARBEARIA · CENTRO DE LEM</p>
           <h1>Seu estilo,<br /><span>bem cuidado.</span></h1>
-          <p className="hero-copy">Um espaço para cuidar do visual no Centro de Luís Eduardo Magalhães. Fale com a equipe para conhecer as opções de atendimento.</p>
+          <p className="hero-copy">No Centro de Luís Eduardo Magalhães, a equipe atende você com atenção. Fale pelo WhatsApp para conhecer as opções e combinar seu horário.</p>
           <div className="hero-actions"><WhatsAppButton label="Agendar pelo WhatsApp" /><a className="text-link" href="#servicos">Ver serviços <ArrowUpRight size={16} /></a></div>
         </div>
         <div className="site-container hero-bottom"><span className="hero-location"><MapPin size={14} /> Luís Eduardo Magalhães, Bahia</span><a className="hero-scroll" href="#servicos"><span>VER SERVIÇOS</span></a></div>
@@ -95,13 +95,13 @@ function Index() {
       <section className="section about-section">
         <div className="site-container about-layout">
           <figure className="about-photo"><img src={detailsImage} alt="Espaço da Preto Barbearia" width={628} height={1020} loading="lazy" /></figure>
-          <div className="about-copy"><p className="eyebrow">A BARBEARIA</p><h2>Um espaço para cuidar do visual.</h2><p>A Preto Barbearia fica no Centro de Luís Eduardo Magalhães. Consulte os serviços disponíveis e fale diretamente com a equipe para combinar seu horário.</p><a className="text-link about-link" href="#contato">Ver endereço e contato <ArrowUpRight size={16} /></a></div>
+          <div className="about-copy"><p className="eyebrow">A BARBEARIA</p><h2>Atendimento com atenção aos detalhes.</h2><p>A Preto Barbearia fica no Centro de Luís Eduardo Magalhães. Consulte os serviços disponíveis e fale diretamente com a equipe para combinar seu horário.</p><a className="text-link about-link" href="#contato">Ver endereço e contato <ArrowUpRight size={16} /></a></div>
         </div>
       </section>
 
       <section className="section gallery-section">
         <div className="site-container">
-          <div className="section-heading gallery-heading"><div><p className="eyebrow">O AMBIENTE</p><h2>Conheça a Preto.</h2></div><p className="section-intro">Da sinuca à fachada, um pouco do espaço e da identidade da barbearia.</p></div>
+          <div className="section-heading gallery-heading"><div><p className="eyebrow">FOTOS DO ESPAÇO</p><h2>Por dentro da Preto.</h2></div><p className="section-intro">Da sinuca à fachada, conheça os detalhes da barbearia.</p></div>
           <GalleryCarousel />
         </div>
       </section>
