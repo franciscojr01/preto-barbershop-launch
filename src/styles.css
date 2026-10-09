@@ -261,6 +261,10 @@
 }
 .brand-footer-logo { width: 90px; height: 90px; object-fit: contain; display: block; }
 
-#lovable-badge { display: none !important; }
+@layer base {
+  #lovable-badge {
+    display: none !important;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation: none !important; transition: none !important; } }
