@@ -317,7 +317,7 @@
   .review-quote { padding: 20px; }
   .instagram-heading { display: block; }
   .instagram-profile-link { margin-top: 15px; }
-  .instagram-profile-preview { width: calc(100% + 40px); max-width: none; height: 540px; margin-left: -20px; }
+  .instagram-profile-preview { width: calc(100% + 40px); max-width: none; height: 480px; margin-left: -20px; }
   .instagram-note { display: none; }
   .gallery-heading { margin-bottom: 22px; }
   .gallery-heading .section-intro { margin-top: 12px; }
