@@ -7,7 +7,7 @@ import footerLogo from "@/assets/uploads/6835.png";
 
 export function Brand({ footer = false }: { footer?: boolean }) {
   if (!footer) return <a href="#inicio" className="brand brand-logo" aria-label="Preto Barbearia — início"><img src={logoAsset.url} alt="Preto Barbearia" width={768} height={768} /></a>;
-  return <a href="#inicio" className="brand brand-footer" aria-label="Preto Barbearia — início"><img className="brand-footer-logo" src={footerLogo} alt="Preto Barbearia" width={160} height={160} /></a>;
+  return <a href="#inicio" className="brand brand-footer" aria-label="Preto Barbearia — início"><img className="brand-footer-logo" src={footerLogo} alt="Preto Barbearia" width={120} height={120} /></a>;
 }
 
 export function WhatsAppButton({ label = "Agendar pelo WhatsApp", compact = false, floating = false }: { label?: string; compact?: boolean; floating?: boolean }) {
