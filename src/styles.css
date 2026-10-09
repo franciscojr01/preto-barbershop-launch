@@ -282,7 +282,7 @@
 .review-shot { margin: 0 0 0 -44px; width: calc(100% + 88px); max-width: 1280px; border: 0; padding: 0; background: transparent; box-shadow: none; display: block; cursor: pointer; }
 .review-shot-image { display: block; width: 100%; max-width: none; height: auto; }
 .review-shot img { width: 100%; height: auto; display: block; border: 0; outline: 0; box-shadow: none; }
-.reviews-copy-below { max-width: 620px; margin-top: 4px; }
+.reviews-copy-below { max-width: 620px; margin-top: 0; }
 .reviews-copy-above { max-width: 620px; margin-bottom: 0; }
 .review-shot figcaption { font-size: 11px; color: var(--muted-foreground); margin-top: 10px; }
 @media (max-width: 767px) {
