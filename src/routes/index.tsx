@@ -8,7 +8,7 @@ import { business, getWhatsAppUrl, mapsEmbedUrl, mapsUrl } from "@/lib/business"
 const heroImage = "https://preto-barbershop-launch.lovable.app/__l5e/assets-v1/4454bf1c-109d-46b4-9de0-77b717f3ace7/preto-ambiente.png";
 const detailsImage = "https://preto-barbershop-launch.lovable.app/__l5e/assets-v1/59122f3e-b568-48b2-a384-2cf064525d2e/preto-espaco.png";
 const title = "Preto Barbearia | Luís Eduardo Magalhães";
-const description = "Cortes masculinos, barba e acabamento no Centro de Luís Eduardo Magalhães. Veja os serviços e agende com a Preto Barbearia.";
+const description = "Conheça a Preto Barbearia em Luís Eduardo Magalhães. Veja o espaço, acompanhe os trabalhos e consulte a equipe sobre serviços e agendamento.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -69,8 +69,8 @@ function Index() {
         <img className="hero-image" src={heroImage} alt="Interior da Preto Barbearia em Luís Eduardo Magalhães" width={1337} height={1020} fetchPriority="high" />
         <div className="site-container hero-content reveal-in">
           <p className="eyebrow">PRETO BARBEARIA · CENTRO DE LEM</p>
-          <h1>Corte, barba<br /><span>e acabamento.</span></h1>
-          <p className="hero-copy">Atendimento na Avenida Juscelino Kubitscheck, no Centro de Luís Eduardo Magalhães.</p>
+          <h1>Seu estilo,<br /><span>bem cuidado.</span></h1>
+          <p className="hero-copy">Um espaço para cuidar do visual no Centro de Luís Eduardo Magalhães. Fale com a equipe para conhecer as opções de atendimento.</p>
           <div className="hero-actions"><WhatsAppButton label="Agendar pelo WhatsApp" /><a className="text-link" href="#servicos">Ver serviços <ArrowUpRight size={16} /></a></div>
         </div>
         <div className="site-container hero-bottom"><span className="hero-location"><MapPin size={14} /> Luís Eduardo Magalhães, Bahia</span><a className="hero-scroll" href="#servicos"><span>VER SERVIÇOS</span></a></div>
@@ -110,9 +110,9 @@ function Index() {
 
       <section id="instagram" className="section instagram-section">
         <div className="site-container">
-          <div className="section-heading instagram-heading"><div><p className="eyebrow">INSTAGRAM</p><h2>Veja os trabalhos da Preto.</h2></div><a className="instagram-profile-link" href={business.instagramUrl} target="_blank" rel="noopener noreferrer"><Instagram size={18} /> @pretobarbearia.lem <ArrowUpRight size={16} /></a></div>
-          <div className="instagram-grid">{business.instagramPosts.map((post, index) => <div className="instagram-frame" key={post.url}><iframe title={`Publicação ${index + 1} do Instagram da Preto Barbearia`} src={`${post.url.replace(/\/$/, "")}/embed/`} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" /></div>)}</div>
-          <p className="instagram-note">Prévia de publicações públicas do perfil. Para trocar os posts, edite a lista em <code>src/lib/business.ts</code>.</p>
+          <div className="section-heading instagram-heading"><div><p className="eyebrow">INSTAGRAM</p><h2>Perfil e trabalhos da Preto.</h2></div><a className="instagram-profile-link" href={business.instagramUrl} target="_blank" rel="noopener noreferrer"><Instagram size={18} /> @pretobarbearia.lem <ArrowUpRight size={16} /></a></div>
+          <div className="instagram-profile-preview"><iframe title="Prévia do perfil e feed público da Preto Barbearia no Instagram" src={business.instagramEmbedUrl} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" /></div>
+          <p className="instagram-note">Prévia do perfil e das publicações públicas. O feed pode mudar conforme novas fotos forem publicadas.</p>
         </div>
       </section>
 
@@ -120,10 +120,11 @@ function Index() {
         <div className="site-container">
           <div className="section-kicker"><span>Como chegar</span><span>Luís Eduardo Magalhães · BA</span></div>
           <div className="contact-layout">
-            <div className="contact-address"><h2>Encontre a Preto.</h2><div className="address-block"><MapPin size={22} /><div><p className="street-address">{business.address}</p><p className="address-city">{business.city}, {business.state}<br />CEP {business.postalCode}</p></div></div><a className="directions-link" href={mapsUrl} target="_blank" rel="noopener noreferrer">Abrir rota no Google Maps <ArrowUpRight size={16} /></a></div>
+            <div className="contact-address"><h2>Encontre a Preto.</h2></div>
             <div className="contact-details"><div className="contact-channel"><span className="channel-label">Agendamento</span><WhatsAppButton label="Falar pelo WhatsApp" compact /></div><a className="instagram-channel" href={business.instagramUrl} target="_blank" rel="noopener noreferrer"><Instagram size={22} /><span><span className="channel-label">Instagram</span><span className="channel-name">@pretobarbearia.lem</span></span><ArrowUpRight size={20} /></a><div className="contact-hours"><Clock size={18} /><div><h3>Horário de funcionamento</h3><p>{business.openingHours || "Consulte os horários pelo WhatsApp."}</p></div></div></div>
           </div>
           <div className="map-frame"><iframe title="Mapa da Preto Barbearia no Google Maps" src={mapsEmbedUrl} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
+          <div className="map-caption"><MapPin size={15} /><p><span>{business.address}</span><span>{business.city}, {business.state} · CEP {business.postalCode}</span></p><a href={mapsUrl} target="_blank" rel="noopener noreferrer">Abrir rota <ArrowUpRight size={14} /></a></div>
         </div>
       </section>
     </main>

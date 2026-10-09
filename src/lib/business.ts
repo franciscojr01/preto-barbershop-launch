@@ -9,11 +9,8 @@ export const business = {
   // WhatsApp público informado no Google Maps e no Instagram do negócio.
   whatsappNumber: "5577999244016",
   instagramUrl: "https://www.instagram.com/pretobarbearia.lem/",
-  // Links de publicações públicas; troque os URLs pelos posts que quiser destacar.
-  instagramPosts: [
-    { url: "https://www.instagram.com/p/Dd4NcySlhlp/" },
-    { url: "https://www.instagram.com/p/DdwtCfVGOsC/" },
-  ],
+  // Embed público do perfil, com cabeçalho e feed. Troque o usuário ao mudar a conta.
+  instagramEmbedUrl: "https://www.instagram.com/pretobarbearia.lem/embed/",
   googleReviewsUrl: "https://share.google/Ai5wROOYxEVsJKeaP",
   reviewRating: 4.9,
   reviewCount: 42,
