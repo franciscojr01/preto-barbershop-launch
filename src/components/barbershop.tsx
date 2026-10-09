@@ -3,10 +3,11 @@ import { ArrowUpRight, MessageCircle, X, Scissors } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { business, getWhatsAppUrl } from "@/lib/business";
 import logoAsset from "@/assets/preto-logo.png.asset.json";
+import footerLogo from "@/assets/uploads/6835.png";
 
 export function Brand({ footer = false }: { footer?: boolean }) {
   if (!footer) return <a href="#inicio" className="brand brand-logo" aria-label="Preto Barbearia — início"><img src={logoAsset.url} alt="Preto Barbearia" width={768} height={768} /></a>;
-  return <a href="#inicio" className="brand brand-footer" aria-label="Preto Barbearia — início"><span>PRETO<span className="brand-dot">.</span></span><span className="brand-sub">BARBEARIA</span></a>;
+  return <a href="#inicio" className="brand brand-footer" aria-label="Preto Barbearia — início"><img className="brand-footer-logo" src={footerLogo} alt="Preto Barbearia" width={160} height={160} /></a>;
 }
 
 export function WhatsAppButton({ label = "Agendar pelo WhatsApp", compact = false, floating = false }: { label?: string; compact?: boolean; floating?: boolean }) {
