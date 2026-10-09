@@ -3,6 +3,7 @@ import { ArrowUpRight, Clock, Instagram, MapPin, Menu, MessageCircle, Scissors, 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Brand, ServiceIcon, WhatsAppButton } from "@/components/barbershop";
+import { GalleryCarousel } from "@/components/gallery-carousel";
 import { business, getWhatsAppUrl, mapsEmbedUrl, mapsUrl } from "@/lib/business";
 
 const heroImage = "https://preto-barbershop-launch.lovable.app/__l5e/assets-v1/4454bf1c-109d-46b4-9de0-77b717f3ace7/preto-ambiente.png";
@@ -95,6 +96,13 @@ function Index() {
         <div className="site-container about-layout">
           <figure className="about-photo"><img src={detailsImage} alt="Espaço da Preto Barbearia" width={628} height={1020} loading="lazy" /></figure>
           <div className="about-copy"><p className="eyebrow">A BARBEARIA</p><h2>Um espaço para cuidar do visual.</h2><p>A Preto Barbearia fica no Centro de Luís Eduardo Magalhães. Consulte os serviços disponíveis e fale diretamente com a equipe para combinar seu horário.</p><a className="text-link about-link" href="#contato">Ver endereço e contato <ArrowUpRight size={16} /></a></div>
+        </div>
+      </section>
+
+      <section className="section gallery-section">
+        <div className="site-container">
+          <div className="section-heading gallery-heading"><div><p className="eyebrow">O AMBIENTE</p><h2>Conheça a Preto.</h2></div><p className="section-intro">Da sinuca à fachada, um pouco do espaço e da identidade da barbearia.</p></div>
+          <GalleryCarousel />
         </div>
       </section>
 
