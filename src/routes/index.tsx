@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowDown, ArrowUpRight, MapPin, Menu, X, Scissors, Sparkles, HeartHandshake, Armchair, ShieldCheck, Instagram, Clock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Brand, ServiceIcon, WhatsAppButton } from "@/components/barbershop";
+import { Brand, PhotoCarousel, PhotoSlot, ServiceIcon, WhatsAppButton } from "@/components/barbershop";
+import reviewsShot from "@/assets/avaliacoes-google.png.asset.json";
 import { business, mapsUrl } from "@/lib/business";
 
 // Keep the exact original Lovable uploads while their binary files are not in GitHub.
@@ -52,13 +53,14 @@ function Index() {
         <span className="hero-caption">Foto do espaço da Preto Barbearia.</span>
       </section>
       <div className="signature-strip"><div className="site-container signature-inner"><p className="signature-name">Presença começa no cuidado.</p><span className="signature-item"><Scissors /> Estilo & personalidade</span><span className="signature-item"><Armchair /> Seu momento de cuidado</span><span className="signature-item"><Sparkles /> Atenção aos detalhes</span></div></div>
+      <section className="section gallery-section" aria-label="Galeria de fotos"><div className="site-container"><div className="gallery-grid"><PhotoSlot src={heroImage} alt="Ambiente da Preto Barbearia" /><PhotoSlot src={detailsImage} alt="Espaço da Preto Barbearia" /><PhotoSlot alt="Foto da barbearia" /><PhotoSlot alt="Foto da barbearia" /><PhotoSlot alt="Foto da barbearia" /></div></div></section>
       <section id="servicos" className="section"><div className="site-container">
         <div className="section-heading"><div><p className="eyebrow">O SEU VISUAL, DO SEU JEITO</p><h2>Serviços com personalidade.</h2></div><p className="section-intro">Do corte ao acabamento, o cuidado com o seu visual está nos detalhes.</p></div>
         <div className="services-grid">{business.services.map((service,index) => <article className="service-card" key={service.id}><div className="service-top"><ServiceIcon kind={service.icon} /><span className="service-number">0{index + 1}</span></div><h3>{service.name}</h3><p>{service.description}</p><a className="service-bottom" href={service.whatsappUrl} target="_blank" rel="noopener noreferrer">Consultar serviço <ArrowUpRight size={16} /></a></article>)}</div>
 
       </div></section>
       <section id="sobre" className="section about-section"><div className="site-container about-layout">
-        <figure className="about-photo"><img src={detailsImage} alt="Espaço original da Preto Barbearia" width={628} height={1020} loading="lazy" /><figcaption>Foto do espaço da Preto Barbearia.</figcaption></figure>
+        <div className="about-photo"><PhotoCarousel photos={[{ src: detailsImage, alt: "Espaço da Preto Barbearia" }, { alt: "Foto do espaço" }, { alt: "Foto do espaço" }, { alt: "Foto do espaço" }]} /></div>
         <div className="about-copy"><p className="eyebrow">ESSÊNCIA PRETO</p><h2>Mais do que<br />uma barbearia.</h2><p>Um espaço para cuidar do visual, valorizar seu estilo e aproveitar uma experiência de atendimento feita com atenção aos detalhes.</p><p>Seu momento de pausa. Seu cuidado. Sua presença.</p><div className="about-signature"><Scissors size={27} strokeWidth={1.2} /><div>PRETO BARBEARIA<span>Luís Eduardo Magalhães · Bahia</span></div></div></div>
       </div></section>
       <section className="section differences"><div className="site-container difference-layout"><div><p className="eyebrow">O QUE NOS MOVE</p><h2>Cuidado em<br />cada detalhe.</h2></div><div className="difference-grid">{differences.map(item => <div className="difference-item" key={item.title}><item.icon /><h3>{item.title}</h3><p>{item.text}</p></div>)}</div></div></section>
@@ -68,6 +70,7 @@ function Index() {
           <div className="review-summary"><div className="review-count">{business.reviewCount}</div><div className="review-source"><span className="google-g" aria-hidden="true">G</span><span>avaliações no Google</span></div></div>
           <div className="reviews-copy"><h2>A experiência<br />de quem conhece.</h2><p>A opinião de quem já sentou na nossa cadeira.<br />Direto no Google, sem filtro.</p>{business.googleReviewsUrl ? <Button asChild variant="editorial" className="review-link"><a href={business.googleReviewsUrl} target="_blank" rel="noopener noreferrer">Ver avaliações no Google <ArrowUpRight /></a></Button> : <Button variant="editorial" className="review-link" onClick={() => setReviewsOpen(true)}>Ver avaliações no Google <ArrowUpRight /></Button>}</div>
         </div>
+        <figure className="review-shot"><img src={reviewsShot.url} alt="Avaliações da Preto Barbearia no Google: nota 4,9 com 42 avaliações" width={917} height={787} loading="lazy" /><figcaption>Captura da ficha do Google da Preto Barbearia.</figcaption></figure>
         <div className="reviews-footnote"><span>Opiniões de clientes</span><p>Contagem da ficha consultada; pode mudar.</p></div>
       </div></section>
       <section id="contato" className="section contact-section"><div className="site-container">
