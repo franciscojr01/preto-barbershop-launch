@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ArrowDown, ArrowUpRight, MapPin, Menu, X, Scissors, Sparkles, HeartHandshake, Armchair, ShieldCheck, Instagram, Clock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Brand, ServiceIcon, WhatsAppButton } from "@/components/barbershop";
-import { business, mapsUrl } from "@/lib/business";
+import { business, getWhatsAppUrl, mapsUrl } from "@/lib/business";
 
 // Keep the exact original Lovable uploads while their binary files are not in GitHub.
 const heroImage = "https://preto-barbershop-launch.lovable.app/__l5e/assets-v1/4454bf1c-109d-46b4-9de0-77b717f3ace7/preto-ambiente.png";
@@ -54,7 +54,7 @@ function Index() {
       <div className="signature-strip"><div className="site-container signature-inner"><p className="signature-name">Presença começa no cuidado.</p><span className="signature-item"><Scissors /> Estilo & personalidade</span><span className="signature-item"><Armchair /> Seu momento de cuidado</span><span className="signature-item"><Sparkles /> Atenção aos detalhes</span></div></div>
       <section id="servicos" className="section"><div className="site-container">
         <div className="section-heading"><div><p className="eyebrow">O SEU VISUAL, DO SEU JEITO</p><h2>Serviços com personalidade.</h2></div><p className="section-intro">Do corte ao acabamento, o cuidado com o seu visual está nos detalhes.</p></div>
-        <div className="services-grid">{business.services.map((service,index) => <article className="service-card" key={service.id}><div className="service-top"><ServiceIcon kind={service.icon} /><span className="service-number">0{index + 1}</span></div><h3>{service.name}</h3><p>{service.description}</p><a className="service-bottom" href="#contato">Consultar serviço <ArrowUpRight size={16} /></a></article>)}</div>
+        <div className="services-grid">{business.services.map((service,index) => <article className="service-card" key={service.id}><div className="service-top"><ServiceIcon kind={service.icon} /><span className="service-number">0{index + 1}</span></div><h3>{service.name}</h3><p>{service.description}</p><a className="service-bottom" href={getWhatsAppUrl(business.whatsappNumber) ?? "#contato"} target="_blank" rel="noopener noreferrer">Consultar serviço <ArrowUpRight size={16} /></a></article>)}</div>
         <p className="service-note">Categorias sujeitas à confirmação. Consulte os serviços oferecidos diretamente com a barbearia.</p>
       </div></section>
       <section id="sobre" className="section about-section"><div className="site-container about-layout">
