@@ -6,7 +6,13 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Lovable's wrapper targets Cloudflare by default. Netlify sets this in
+// netlify.toml, while the Lovable preview keeps its default target.
+const nitroForNetlify =
+  process.env.NITRO_PRESET === "netlify" ? { preset: "netlify" as const } : undefined;
+
 export default defineConfig({
+  ...(nitroForNetlify ? { nitro: nitroForNetlify } : {}),
   vite: {
     // Prebundle the initial page's dependencies together so late discovery
     // cannot leave an open preview using two React module generations.
@@ -31,3 +37,4 @@ export default defineConfig({
     server: { entry: "server" },
   },
 });
+
