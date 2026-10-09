@@ -204,7 +204,7 @@
   .mobile-nav a { min-height: 44px; display: flex; align-items: center; border-bottom: 1px solid var(--border); font-size: 14px; }
   /* Keep the crop stable when mobile browser controls appear during a swipe. */
   .hero { height: 640px; min-height: 640px; }
-  .hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 57% 55%; transform: none; animation: none; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+  .hero-image { position: absolute; inset: -56px 0 0; width: 100%; height: calc(100% + 56px); object-fit: cover; object-position: 57% center; transform: none; animation: none; pointer-events: none; user-select: none; -webkit-user-drag: none; }
   .hero::after { background: linear-gradient(90deg, oklch(0.10 0 0 / 86%), oklch(0.10 0 0 / 37%)), linear-gradient(0deg, oklch(0.10 0 0 / 65%), transparent 65%); }
   .hero-content { padding-top: 84px; }
   .eyebrow { font-size: 8px; letter-spacing: 1.8px; gap: 8px; }
