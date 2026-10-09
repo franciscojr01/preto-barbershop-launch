@@ -35,7 +35,7 @@ export function PhotoSlot({ src, alt, label }: { src?: string; alt: string; labe
 export function PhotoCarousel({ photos }: { photos: { src?: string; alt: string }[] }) {
   const [index, setIndex] = useState(0);
   const go = (step: number) => setIndex(i => (i + step + photos.length) % photos.length);
-  const photo = photos[index];
+  const photo = photos[index] ?? { alt: "Foto" };
   return <div className="carousel" aria-roledescription="carrossel" aria-label="Fotos do espaço">
     <div className="carousel-frame"><PhotoSlot src={photo.src} alt={photo.alt} label={`Foto ${index + 1} — em breve`} /></div>
     <div className="carousel-controls">
