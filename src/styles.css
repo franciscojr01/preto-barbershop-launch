@@ -303,7 +303,7 @@
 .instagram-channel > svg:last-child { margin-left: auto; flex-shrink: 0; }
 .instagram-channel > span { text-align: left; }
 .map-frame { height: 390px; margin-top: 48px; overflow: hidden; border: 1px solid var(--border); background: var(--card); }
-.map-frame iframe { display: block; width: 100%; height: 100%; border: 0; filter: grayscale(1) invert(1) brightness(.9) contrast(.88); }
+.map-frame iframe { display: block; width: 100%; height: 100%; border: 0; filter: grayscale(1) invert(.94) brightness(1.08) contrast(.9); }
 .map-caption { display: flex; align-items: center; gap: 12px; margin-top: 17px; color: var(--muted-foreground); font-size: 11px; }
 .map-caption > svg { flex-shrink: 0; color: var(--primary); }
 .map-caption p { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 11px; margin: 0; }
