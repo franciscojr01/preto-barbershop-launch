@@ -14,7 +14,7 @@ const description = "Conheça a Preto Barbearia em Luís Eduardo Magalhães, BA.
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
-    meta: [{ title }, { name: "description", content: description }, { property: "og:title", content: title }, { property: "og:description", content: description }, { property: "og:type", content: "website" }, { property: "og:url", content: "/" }, { name: "twitter:card", content: "summary_large_image" }],
+    meta: [{ title }, { name: "description", content: description }, { property: "og:title", content: title }, { property: "og:description", content: description }, { property: "og:type", content: "website" }, { property: "og:url", content: "/" }, { property: "og:image", content: heroImage }, { name: "twitter:image", content: heroImage }, { name: "twitter:card", content: "summary_large_image" }],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "HairSalon", name: "Preto Barbearia", address: { "@type": "PostalAddress", streetAddress: business.address, addressLocality: business.city, addressRegion: "BA", postalCode: business.postalCode, addressCountry: "BR" }, sameAs: [business.instagramUrl] }) }],
   }),
