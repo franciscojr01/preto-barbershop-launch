@@ -27,12 +27,12 @@ export function ServiceIcon({ kind }: { kind: string }) {
 }
 
 
-export function PhotoSlot({ src, alt, label }: { src?: string; alt: string; label?: string }) {
+export function PhotoSlot({ src, alt, label }: { src?: string | undefined; alt: string; label?: string }) {
   if (src) return <img src={src} alt={alt} loading="lazy" />;
   return <div className="photo-slot" role="img" aria-label={`${alt} — espaço reservado`}><span>{label ?? "Espaço para foto"}</span></div>;
 }
 
-export function PhotoCarousel({ photos }: { photos: { src?: string; alt: string }[] }) {
+export function PhotoCarousel({ photos }: { photos: { src?: string | undefined; alt: string }[] }) {
   const [index, setIndex] = useState(0);
   const go = (step: number) => setIndex(i => (i + step + photos.length) % photos.length);
   const photo = photos[index] ?? { alt: "Foto" };
