@@ -204,7 +204,7 @@
   .mobile-nav a { min-height: 44px; display: flex; align-items: center; border-bottom: 1px solid var(--border); font-size: 14px; }
   .hero { height: calc(100svh - 122px); min-height: 565px; max-height: 730px; }
   .hero-image { position: absolute; inset: 0; object-position: 57% center; transform: none; animation: none; }
-  .hero::after { background: linear-gradient(90deg, oklch(0.10 0 0 / 86%), oklch(0.10 0 0 / 37%)), linear-gradient(0deg, oklch(0.10 0 0 / 65%), transparent 65%); }
+  .hero::after { background: transparent; }
   .hero-content { padding-top: 84px; }
   .eyebrow { font-size: 8px; letter-spacing: 1.8px; gap: 8px; }
   .eyebrow::before { width: 18px; }
