@@ -279,7 +279,7 @@
 .carousel-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
 .carousel-arrow { border: 1px solid var(--border); border-radius: 999px; width: 44px; height: 44px; }
 .carousel-count { font-size: 12px; letter-spacing: .14em; color: var(--muted-foreground); }
-.review-shot { margin: 0 0 0 -60px; width: calc(100% + 88px); max-width: 1280px; border: 0; padding: 0; background: transparent; box-shadow: none; display: block; cursor: pointer; }
+.review-shot { margin: 0 0 0 -80px; width: calc(100% + 88px); max-width: 1280px; border: 0; padding: 0; background: transparent; box-shadow: none; display: block; cursor: pointer; }
 .review-shot-image { display: block; width: 100%; max-width: none; height: auto; }
 .review-shot img { width: 100%; height: auto; display: block; border: 0; outline: 0; box-shadow: none; }
 .reviews-copy-below { max-width: 620px; margin-top: -10px; }
