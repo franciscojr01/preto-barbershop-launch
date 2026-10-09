@@ -6,7 +6,7 @@ export const business = {
   address: "Avenida Juscelino Kubitscheck, 1619, Centro",
   postalCode: "47850-000",
   instagramUrl: "https://www.instagram.com/pretobarbearia.lem/",
-  whatsappNumber: "", // Only set after the owner confirms the correct contact.
+  whatsappNumber: "557799674609",
   googleReviewsUrl: "", // Exact Google business profile URL, pending confirmation.
   reviewCount: 42,
   openingHours: "",
@@ -21,7 +21,7 @@ export const business = {
 export function getWhatsAppUrl(number: string): string | null {
   const digits = number.replace(/\D/g, "");
   if (!/^55\d{10,11}$/.test(digits)) return null;
-  return `https://wa.me/${digits}?text=${encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços e agendar um horário na Preto Barbearia.")}`;
+  return `https://wa.me/${digits}?text=${encodeURIComponent("Olá! Gostaria de agendar um horário na Preto Barbearia. Quais horários estão disponíveis?")}`;
 }
 
 export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${business.name}, ${business.address}, ${business.city}, ${business.state}, ${business.postalCode}`)}`;
